@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Top Dishes</title>
+</head>
+<style>
+    ul.no-bullets {
+        list-style-type: none;
+        margin: 20;
+        padding: 20;
+    }
+    
+    .topnav {
+    background-color: rgb(253, 253, 253);
+    overflow: hidden;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    /* Add a color to the active/current link */
+    .topnav a.active {
+        background-color: #3871a9;
+        color: white;
+    }
+
+    .logo-img{
+        float: left;
+        position: relative;
+        margin: 10px 15px 15px 10px;
+    }
+
+</style>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="topnav">
+        <img class="logo-img" src="static/web_logo.jpg" alt="SNETT SAMAYAL THEDAL" width="100" height="100" align = CENTER>
+        <a class="active" href="{{url_for('home')}}"><i class="fa fa-fw fa-home"></i>Home</a> 
+        
+    </div>
+
+    <center>
+    <h2>SNETT SAMAYAL THEDAL</h2>
+
+    <h3>Dishes you might like</h3>
+
+    <ul class="no-bullets">
+    <li>
+    {% if dish1 %}
+    <a href={{url1}} >{{ dish1 }}</a>
+    {% endif %}
+    </li>
+    
+    <li>
+    {% if dish2 %}
+    <a href={{url2}} >{{ dish2 }}</a>
+    {% endif %}
+    </li>
+
+    <li>
+    {% if dish3 %}
+    <a href={{url3}} >{{ dish3 }}</a>
+    {% endif %}
+    </li>
+
+    <li>
+    {% if dish4 %}
+    <a href={{url4}} >{{ dish4 }}</a>
+    {% endif %}
+    </li>
+
+    <li>
+    {% if dish5 %}
+    <a href={{url5}} >{{ dish5 }}</a>
+    {% endif %}
+    </li>
+    </center>
+
+</body>
+</html>
